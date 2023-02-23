@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane fx:controller="dev.atellezfx.taller.EmpleadoController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="720.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="35.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="427.0" minWidth="10.0" prefWidth="252.0" />
+      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="275.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="ID:" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets right="8.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="cmpId" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS" />
+      <Label text="Nombre:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets right="8.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="E-mail:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets right="8.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="cmpNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+      <TextField fx:id="cmpEmail" prefHeight="25.0" prefWidth="379.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buscar" text="BUSCAR" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+      <Label text="Apellidos:" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <padding>
+            <Insets right="8.0" />
+         </padding>
+      </Label>
+      <Label text="Departamento:" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <padding>
+            <Insets right="8.0" />
+         </padding>
+      </Label>
+      <Label text="Salario:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets right="8.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="cmpSalario" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+      <ComboBox fx:id="cmpDepto" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="ADMINISTRACIÓN"/>
+                <String fx:value="SISTEMAS"/>
+                <String fx:value="MARKETING"/>
+                <String fx:value="CONTABILIDAD"/>
+            </FXCollections>
+        </items>
+      </ComboBox>
+      <TextField fx:id="cmpApellidos" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</GridPane>
